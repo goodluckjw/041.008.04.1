@@ -15,6 +15,7 @@ def highlight(text, terms):
 def parse_law_xml(xml_data, terms, unit):
     tree = ET.fromstring(xml_data)
     articles = tree.findall(".//조문")
+    print(f"[DEBUG] ▶ XML 원본:\n{xml_data[:1000]}")
     print(f"[DEBUG] ▶ terms: {terms}")
     print(f"[DEBUG] ▶ unit: {unit}")
     print(f"[DEBUG] ▶ 조문 수: {len(articles)}")
